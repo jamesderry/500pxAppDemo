@@ -48,7 +48,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pictures" id="lRr-6X-WpD"/>
+                    <navigationItem key="navigationItem" title="Pictures" id="lRr-6X-WpD">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="gag-ks-if0">
+                            <connections>
+                                <segue destination="qTh-Pi-rH0" kind="push" identifier="mapSegue" id="VrQ-Q8-WON"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="NQw-dA-NPA" id="b05-0y-2od"/>
                     </connections>
@@ -56,6 +62,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNR-D9-7xh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="591" y="235"/>
+        </scene>
+        <!--Photo Map View Controller-->
+        <scene sceneID="tIu-Uc-qmi">
+            <objects>
+                <viewController id="qTh-Pi-rH0" customClass="PhotoMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cqM-W9-RNk"/>
+                        <viewControllerLayoutGuide type="bottom" id="FD1-NC-0oU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="19B-g5-Pxr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-Hw-Ogq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WjP-7p-wwC"/>
+                    <connections>
+                        <outlet property="mapView" destination="vuT-Hw-Ogq" id="vzz-pf-1pC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fdg-v1-k7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="235"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mnL-p7-fhC">

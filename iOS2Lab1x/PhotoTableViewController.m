@@ -9,6 +9,7 @@
 #import "PhotoTableViewController.h"
 #import "Api500pxFetcher.h"
 #import "PhotoTableViewCell.h"
+#import "PhotoMapViewController.h"
 
 @interface PhotoTableViewController ()
 {
@@ -125,6 +126,12 @@
             });
         }
     }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    PhotoMapViewController *destinationVC = (PhotoMapViewController *)segue.destinationViewController;
+    destinationVC.gallery = [NSArray arrayWithArray:fetcher.gallery];
 }
 
 @end

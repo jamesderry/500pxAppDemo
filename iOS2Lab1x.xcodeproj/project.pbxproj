@@ -25,6 +25,10 @@
 		D0375B1E1828883000C43881 /* Api500pxFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D0375B1D1828883000C43881 /* Api500pxFetcher.m */; };
 		D0375B211828885800C43881 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = D0375B201828885800C43881 /* Photo.m */; };
 		D0375B23182890A800C43881 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0375B22182890A800C43881 /* CFNetwork.framework */; };
+		D0606D3A183075950032DEA5 /* PhotoGeocodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0606D39183075950032DEA5 /* PhotoGeocodeManager.m */; };
+		D0B36386182F2FF6000D1533 /* PhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B36385182F2FF6000D1533 /* PhotoMapViewController.m */; };
+		D0B36388182F3063000D1533 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B36387182F3063000D1533 /* MapKit.framework */; };
+		D0B3638A182F5502000D1533 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B36389182F5502000D1533 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,12 @@
 		D0375B1F1828885800C43881 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		D0375B201828885800C43881 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		D0375B22182890A800C43881 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D0606D38183075950032DEA5 /* PhotoGeocodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGeocodeManager.h; sourceTree = "<group>"; };
+		D0606D39183075950032DEA5 /* PhotoGeocodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGeocodeManager.m; sourceTree = "<group>"; };
+		D0B36384182F2FF6000D1533 /* PhotoMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoMapViewController.h; path = ../PhotoMapViewController.h; sourceTree = "<group>"; };
+		D0B36385182F2FF6000D1533 /* PhotoMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoMapViewController.m; path = ../PhotoMapViewController.m; sourceTree = "<group>"; };
+		D0B36387182F3063000D1533 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0B36389182F5502000D1533 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B3638A182F5502000D1533 /* CoreLocation.framework in Frameworks */,
+				D0B36388182F3063000D1533 /* MapKit.framework in Frameworks */,
 				D0375B23182890A800C43881 /* CFNetwork.framework in Frameworks */,
 				D0375AE818287DA800C43881 /* CoreGraphics.framework in Frameworks */,
 				D0375AEA18287DA800C43881 /* UIKit.framework in Frameworks */,
@@ -114,6 +126,8 @@
 		D0375AE418287DA800C43881 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0B36389182F5502000D1533 /* CoreLocation.framework */,
+				D0B36387182F3063000D1533 /* MapKit.framework */,
 				D0375B22182890A800C43881 /* CFNetwork.framework */,
 				D0375AE518287DA800C43881 /* Foundation.framework */,
 				D0375AE718287DA800C43881 /* CoreGraphics.framework */,
@@ -132,12 +146,16 @@
 				D0375B17182882FF00C43881 /* PhotoTableViewCell.m */,
 				D0375AF718287DA800C43881 /* Images.xcassets */,
 				D0375AEC18287DA800C43881 /* Supporting Files */,
+				D0B36384182F2FF6000D1533 /* PhotoMapViewController.h */,
+				D0B36385182F2FF6000D1533 /* PhotoMapViewController.m */,
 				D0375B191828873A00C43881 /* PhotoTableViewController.h */,
 				D0375B1A1828873A00C43881 /* PhotoTableViewController.m */,
 				D0375B1C1828883000C43881 /* Api500pxFetcher.h */,
 				D0375B1D1828883000C43881 /* Api500pxFetcher.m */,
 				D0375B1F1828885800C43881 /* Photo.h */,
 				D0375B201828885800C43881 /* Photo.m */,
+				D0606D38183075950032DEA5 /* PhotoGeocodeManager.h */,
+				D0606D39183075950032DEA5 /* PhotoGeocodeManager.m */,
 			);
 			path = iOS2Lab1x;
 			sourceTree = "<group>";
@@ -270,7 +288,9 @@
 				D0375B211828885800C43881 /* Photo.m in Sources */,
 				D0375AF618287DA800C43881 /* AppDelegate.m in Sources */,
 				D0375AF218287DA800C43881 /* main.m in Sources */,
+				D0606D3A183075950032DEA5 /* PhotoGeocodeManager.m in Sources */,
 				D0375B1B1828873A00C43881 /* PhotoTableViewController.m in Sources */,
+				D0B36386182F2FF6000D1533 /* PhotoMapViewController.m in Sources */,
 				D0375B1E1828883000C43881 /* Api500pxFetcher.m in Sources */,
 				D0375B18182882FF00C43881 /* PhotoTableViewCell.m in Sources */,
 			);
@@ -473,6 +493,7 @@
 				D0375B1018287DA800C43881 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0375B1118287DA800C43881 /* Build configuration list for PBXNativeTarget "iOS2Lab1xTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +502,7 @@
 				D0375B1318287DA800C43881 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

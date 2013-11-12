@@ -83,6 +83,11 @@
         onePhoto.imageURL = [photoInfo objectForKey:@"image_url"];
         onePhoto.name = [photoInfo objectForKey:@"name"];
         onePhoto.user = [[photoInfo objectForKey:@"user"] objectForKey:@"username"];
+        //now get the city, country and userpic url
+        onePhoto.city = [[photoInfo objectForKey:@"user"] objectForKey:@"city"];
+        NSLog(@"onePhoto.city=%@", onePhoto.city);
+        onePhoto.country = [[photoInfo objectForKey:@"user"] objectForKey:@"country"];
+        onePhoto.userPicURL = [[photoInfo objectForKey:@"user"] objectForKey:@"userpic_url"];
         /*
         onePhoto.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:onePhoto.imageURL]]];
         */
@@ -99,8 +104,6 @@
     
     [self.delegate didReceiveNewPhotos];
 }
-
-
 
 
 
