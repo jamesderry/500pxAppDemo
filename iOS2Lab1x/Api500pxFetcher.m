@@ -8,12 +8,14 @@
 
 #import "Api500pxFetcher.h"
 
-#define k500pxURLGallery @"https://api.500px.com/v1/photos?feature=popular&page=1&rpp=25&consumer_key=FSYAW9OQHwBhe6q1QpmYZAJwZd4RJdV1YIy2ghBZ"
+#define kApi500pxConsumerKeyName @"Api500pxConsumerKey"
+#define kApi500pxURLGallery @"https://api.500px.com/v1/photos?feature=popular&page=1&rpp=25&exclude=nude&exclude=people&consumer_key="
 
 @interface Api500pxFetcher ()
 {
     Photo *onePhoto;
     int page;
+    const NSString *apiConsumerKey;
 }
 
 @end
@@ -24,11 +26,16 @@
 {
     self = [super init];
     if (self) {
+        //500px webservice consumer key name should be stored already in api_settings.plist
+        NSString *filePath = [[NSBundle mainBundle]pathForResource:@"api_settings" ofType:@"plist"];
+        NSDictionary *apiKeys = [NSDictionary dictionaryWithContentsOfFile:filePath];
         
+        apiConsumerKey = [NSString stringWithString:[apiKeys objectForKey:kApi500pxConsumerKeyName]];
         self.gallery = [[NSMutableArray alloc] init];
         page = 1;
         
-        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:k500pxURLGallery]];
+        NSString *strURL = [NSString stringWithFormat:@"%@%@", kApi500pxURLGallery, apiConsumerKey];
+        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:strURL]];
         
         [NSURLConnection sendAsynchronousRequest:urlRequest queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
             
@@ -46,7 +53,7 @@
 - (void)getMorePhotos
 {
     page = page + 1;
-    NSString *pageURL = [NSString stringWithFormat:@"https://api.500px.com/v1/photos?feature=popular&page=%i&rpp=25&consumer_key=FSYAW9OQHwBhe6q1QpmYZAJwZd4RJdV1YIy2ghBZ", page];
+    NSString *pageURL = [NSString stringWithFormat:@"https://api.500px.com/v1/photos?feature=popular&page=%i&rpp=25&exclude=nude&exclude=people&consumer_key=%@", page, apiConsumerKey];
     
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:pageURL]];
     
@@ -70,7 +77,7 @@
     //NSLog(@"%@", parsedObject);
     
     NSArray *photos = [parsedObject valueForKey:@"photos"];
-    int numberofphotos = [photos count];
+    NSUInteger numberofphotos = [photos count];
     
     NSMutableArray *tempPhotoCollector = [[NSMutableArray alloc] initWithCapacity:numberofphotos];
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D031EB561832EACF00C6E80F /* api_settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = D031EB551832EACF00C6E80F /* api_settings.plist */; };
 		D0375AE618287DA800C43881 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0375AE518287DA800C43881 /* Foundation.framework */; };
 		D0375AE818287DA800C43881 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0375AE718287DA800C43881 /* CoreGraphics.framework */; };
 		D0375AEA18287DA800C43881 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0375AE918287DA800C43881 /* UIKit.framework */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D031EB551832EACF00C6E80F /* api_settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = api_settings.plist; sourceTree = "<group>"; };
 		D0375AE218287DA800C43881 /* iOS2Lab1x.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS2Lab1x.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0375AE518287DA800C43881 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0375AE718287DA800C43881 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,16 +142,17 @@
 		D0375AEB18287DA800C43881 /* iOS2Lab1x */ = {
 			isa = PBXGroup;
 			children = (
+				D031EB551832EACF00C6E80F /* api_settings.plist */,
 				D0375AF418287DA800C43881 /* AppDelegate.h */,
 				D0375AF518287DA800C43881 /* AppDelegate.m */,
 				D0375B16182882FF00C43881 /* PhotoTableViewCell.h */,
 				D0375B17182882FF00C43881 /* PhotoTableViewCell.m */,
+				D0375B191828873A00C43881 /* PhotoTableViewController.h */,
+				D0375B1A1828873A00C43881 /* PhotoTableViewController.m */,
 				D0375AF718287DA800C43881 /* Images.xcassets */,
 				D0375AEC18287DA800C43881 /* Supporting Files */,
 				D0B36384182F2FF6000D1533 /* PhotoMapViewController.h */,
 				D0B36385182F2FF6000D1533 /* PhotoMapViewController.m */,
-				D0375B191828873A00C43881 /* PhotoTableViewController.h */,
-				D0375B1A1828873A00C43881 /* PhotoTableViewController.m */,
 				D0375B1C1828883000C43881 /* Api500pxFetcher.h */,
 				D0375B1D1828883000C43881 /* Api500pxFetcher.m */,
 				D0375B1F1828885800C43881 /* Photo.h */,
@@ -266,6 +269,7 @@
 			files = (
 				D0375B1518287EF500C43881 /* MainStoryboard.storyboard in Resources */,
 				D0375AF018287DA800C43881 /* InfoPlist.strings in Resources */,
+				D031EB561832EACF00C6E80F /* api_settings.plist in Resources */,
 				D0375AF818287DA800C43881 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

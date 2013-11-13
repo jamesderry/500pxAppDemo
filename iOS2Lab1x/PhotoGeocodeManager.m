@@ -35,7 +35,7 @@
 
 - (id)init
 {
-    self = [super init]; //make this a singleton in future project
+    self = [super init];
     if (self) {
         self.geocodedLocations = [[NSMutableDictionary alloc] init];
         geocodedArray = [[NSMutableArray alloc] init];
@@ -90,6 +90,7 @@
         NSLog(@"cache hit...for location %@", location);
         [self.delegate didObtainPlacemark:[self.geocodedLocations objectForKey:location] forLocation:location];
     }
+    //to-do list
     //check cache for matching location string
     // if exists call delegate passing coordinates
     // if does not exist call Apple geocoder
